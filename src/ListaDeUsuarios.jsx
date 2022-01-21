@@ -48,6 +48,10 @@ const abrirModalPagar = (name) => {
     setPegarUsuario(name)
 }
 
+const fecharPrimeiroModal = (name) => {
+    setAbrirPagamento("none")
+}
+
 // Função que abre o modal de recibo de pagamento 
 const abrirModalPagou = () => {
     if (valorDinheiro === "") {
@@ -95,23 +99,28 @@ const valorInput = (event) => {
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
             <div className="abrirModal" style={{display: abrirPagamento}}>
-                <p className="texto-cabecalho-modal">Pagamento para <span>{pegarUsuario}</span></p>
+                <div className="texto-cabecalho-modal">
+                    <p className='modal-title'>Pagamento para <span>{pegarUsuario}</span></p>
+                    <div>
+                        <button className="btn-fechar" onClick={()=>{fecharPrimeiroModal()}}>X</button>
+                    </div>
+                </div>
                 <div className="valorInput">
-                <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
-                <p style={{display:validarCampo}}>Campo obrigatório</p>
+                    <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
+                    <p style={{display:validarCampo}}>Campo obrigatório</p>
                 </div>
                 <select value={valorCartao} onChange={escolhaDoCartao}>
                 <option value="1">Cartão com final {cards[0].card_number.substr(-4)}</option>
                 <option value="2">Cartão com final {cards[1].card_number.substr(-4)}</option>
                 </select>
-                <button onClick={()=>{abrirModalPagou ()}}>Pagar</button>
+                <button className='btn-pagar' onClick={()=>{abrirModalPagou ()}}>Pagar</button>
             </div>  
 
             {/*------------------------------Abrir Modal de recibo de pagamento--------------------------------*/}
             <div className="abrirModal" style={{display: abrirPagou}}>
                 <p className="texto-cabecalho-modal">Recibo de pagamento</p>
                 <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso</p>
-                <button onClick={()=>{fecharModal()}}>Fechar</button>
+                <button className='btn-pagar' onClick={()=>{fecharModal()}}>Fechar</button>
             </div>
         </>
     )
