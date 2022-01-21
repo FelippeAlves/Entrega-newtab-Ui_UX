@@ -12,6 +12,13 @@ body {
   margin-top: 0.063rem;
   align-items: center;
   padding: 1.25rem;
+  /* width: 45vw; */
+}
+
+.desktop-layout {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .content {
@@ -121,9 +128,25 @@ button {
   margin-top: 2%;
 }
 
+.letter-sucess {
+  color: #12bf12;
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+.letter-negative {
+  padding: 0 4px;
+  color: red;
+  font-weight: 700;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 412px) and (min-width: 391px) {
+  .container {
+    width: 100vw;
+  }
+
   .thumbnail {
     width: 75px;
   }
@@ -133,7 +156,29 @@ button {
   }
 }
 
+@media screen and (min-width: 1901px) {
+  .container {
+    width: 31vw;
+  }
+}
+
+@media screen and (max-width: 1900px) and (min-width: 1025px) {
+  .container {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 391px) {
+  .container {
+    width: 100vw;
+  }
+}
+
 @media screen and (max-width: 390px) and (min-width: 376px) {
+  .container {
+    width: 90vw;
+  }
+
   .thumbnail {
     width: 75px;
   }

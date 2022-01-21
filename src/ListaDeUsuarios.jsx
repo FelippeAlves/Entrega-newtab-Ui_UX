@@ -37,7 +37,8 @@ const escolhaDoCartao = (event) => {
 const [abrirPagamento, setAbrirPagamento] = useState("none"); // Para abrir modal de pagamento
 const [pegarUsuario, setPegarUsuario] = useState(""); // Para pegar o nome do usuário
 const [abrirPagou, setAbrirPagou] = useState("none"); // Para abrir modal com recibo de pagamento
-const [abrirNaoRecebeu, setAbrirNaoRecebeu] = useState(""); // Para msg de erro de pagamento
+const [abrirRecebeu, setAbrirRecebeu] = useState("flex"); // Para msg de erro de pagamento
+const [abrirNaoRecebeu, setAbrirNaoRecebeu] = useState("none"); // Para msg de erro de pagamento
 const [valorCartao, setValorCartao] = useState("1"); // Para pegar o cartão escolhido para pagamento
 const [valorDinheiro, setValorDinheiro] = useState(""); // Para pegar o valor de pagamento digitado
 const [validarCampo, setValidarCampo] = useState("none"); // Para validar campo de valor digitado
@@ -59,9 +60,11 @@ const abrirModalPagou = () => {
     } else 
         {
         if (valorCartao === "1") {
-            setAbrirNaoRecebeu("");
+            setAbrirRecebeu("flex");
+            setAbrirNaoRecebeu("none")
         } else {
-            setAbrirNaoRecebeu("não");
+            setAbrirRecebeu("none");
+            setAbrirNaoRecebeu("flex")
         }
         setAbrirPagamento("none");
         setAbrirPagou("flex");
@@ -84,7 +87,9 @@ const valorInput = (event) => {
 // Renderizando na tela as informações recebidas da API 
     return (
         <>
+        <div className='desktop-layout'>
             {infos.map(item => (
+                
                 <div className="container" key={item.index}>
                     <div className="content">
                         <img className="thumbnail" src={item.img} alt="Foto do usuário" />
@@ -96,6 +101,7 @@ const valorInput = (event) => {
                     </div>
                 </div>
             ))}
+        </div>
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
             <div className="abrirModal" style={{display: abrirPagamento}}>
@@ -119,7 +125,8 @@ const valorInput = (event) => {
             {/*------------------------------Abrir Modal de recibo de pagamento--------------------------------*/}
             <div className="abrirModal" style={{display: abrirPagou}}>
                 <p className="texto-cabecalho-modal">Recibo de pagamento</p>
-                <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso</p>
+                <p className="pagamento-sucess" style={{display: abrirRecebeu}}>O Pagamento foi concluído com <span className='letter-sucess'>sucesso</span>!</p>
+                <p className="pagamento-negative" style={{display: abrirNaoRecebeu}}>O Pagamento <span className='letter-negative'>não</span> foi concluído!</p>
                 <button className='btn-pagar' onClick={()=>{fecharModal()}}>Fechar</button>
             </div>
         </>
