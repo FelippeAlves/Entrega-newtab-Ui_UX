@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Entrega-newtab-Ui_UX/static/css/main.11a39a0a.chunk.css",
+    "main.css": "/Entrega-newtab-Ui_UX/static/css/main.80af90e0.chunk.css",
     "main.js": "/Entrega-newtab-Ui_UX/static/js/main.d6341306.chunk.js",
     "main.js.map": "/Entrega-newtab-Ui_UX/static/js/main.d6341306.chunk.js.map",
     "runtime-main.js": "/Entrega-newtab-Ui_UX/static/js/runtime-main.6246d5a8.js",
@@ -8,15 +8,15 @@
     "static/js/2.50c414a1.chunk.js": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js",
     "static/js/2.50c414a1.chunk.js.map": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js.map",
     "index.html": "/Entrega-newtab-Ui_UX/index.html",
-    "precache-manifest.de45e299403147e63cd71128b95be892.js": "/Entrega-newtab-Ui_UX/precache-manifest.de45e299403147e63cd71128b95be892.js",
+    "precache-manifest.221f3b9209fa1922346f24957bdc4e68.js": "/Entrega-newtab-Ui_UX/precache-manifest.221f3b9209fa1922346f24957bdc4e68.js",
     "service-worker.js": "/Entrega-newtab-Ui_UX/service-worker.js",
-    "static/css/main.11a39a0a.chunk.css.map": "/Entrega-newtab-Ui_UX/static/css/main.11a39a0a.chunk.css.map",
+    "static/css/main.80af90e0.chunk.css.map": "/Entrega-newtab-Ui_UX/static/css/main.80af90e0.chunk.css.map",
     "static/js/2.50c414a1.chunk.js.LICENSE.txt": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6246d5a8.js",
     "static/js/2.50c414a1.chunk.js",
-    "static/css/main.11a39a0a.chunk.css",
+    "static/css/main.80af90e0.chunk.css",
     "static/js/main.d6341306.chunk.js"
   ]
 }
