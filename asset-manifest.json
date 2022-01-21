@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/gh-pages/static/css/main.11a39a0a.chunk.css",
-    "main.js": "/gh-pages/static/js/main.d6341306.chunk.js",
-    "main.js.map": "/gh-pages/static/js/main.d6341306.chunk.js.map",
-    "runtime-main.js": "/gh-pages/static/js/runtime-main.dfc6e1fd.js",
-    "runtime-main.js.map": "/gh-pages/static/js/runtime-main.dfc6e1fd.js.map",
-    "static/js/2.50c414a1.chunk.js": "/gh-pages/static/js/2.50c414a1.chunk.js",
-    "static/js/2.50c414a1.chunk.js.map": "/gh-pages/static/js/2.50c414a1.chunk.js.map",
-    "index.html": "/gh-pages/index.html",
-    "precache-manifest.3c2ab42761315a83534f9af380e0e0ad.js": "/gh-pages/precache-manifest.3c2ab42761315a83534f9af380e0e0ad.js",
-    "service-worker.js": "/gh-pages/service-worker.js",
-    "static/css/main.11a39a0a.chunk.css.map": "/gh-pages/static/css/main.11a39a0a.chunk.css.map",
-    "static/js/2.50c414a1.chunk.js.LICENSE.txt": "/gh-pages/static/js/2.50c414a1.chunk.js.LICENSE.txt"
+    "main.css": "/Entrega-newtab-Ui_UX/static/css/main.11a39a0a.chunk.css",
+    "main.js": "/Entrega-newtab-Ui_UX/static/js/main.d6341306.chunk.js",
+    "main.js.map": "/Entrega-newtab-Ui_UX/static/js/main.d6341306.chunk.js.map",
+    "runtime-main.js": "/Entrega-newtab-Ui_UX/static/js/runtime-main.6246d5a8.js",
+    "runtime-main.js.map": "/Entrega-newtab-Ui_UX/static/js/runtime-main.6246d5a8.js.map",
+    "static/js/2.50c414a1.chunk.js": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js",
+    "static/js/2.50c414a1.chunk.js.map": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js.map",
+    "index.html": "/Entrega-newtab-Ui_UX/index.html",
+    "precache-manifest.de45e299403147e63cd71128b95be892.js": "/Entrega-newtab-Ui_UX/precache-manifest.de45e299403147e63cd71128b95be892.js",
+    "service-worker.js": "/Entrega-newtab-Ui_UX/service-worker.js",
+    "static/css/main.11a39a0a.chunk.css.map": "/Entrega-newtab-Ui_UX/static/css/main.11a39a0a.chunk.css.map",
+    "static/js/2.50c414a1.chunk.js.LICENSE.txt": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.dfc6e1fd.js",
+    "static/js/runtime-main.6246d5a8.js",
     "static/js/2.50c414a1.chunk.js",
     "static/css/main.11a39a0a.chunk.css",
     "static/js/main.d6341306.chunk.js"
