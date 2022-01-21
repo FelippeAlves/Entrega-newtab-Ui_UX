@@ -156,13 +156,13 @@ button {
   }
 }
 
-@media screen and (min-width: 1901px) {
+@media screen and (max-width: 2200px) and (min-width: 1900px) {
   .container {
-    width: 31vw;
+    width: 30vw;
   }
 }
 
-@media screen and (max-width: 1900px) and (min-width: 1025px) {
+@media screen and (max-width: 1899px) and (min-width: 1025px) {
   .container {
     width: 45vw;
   }
