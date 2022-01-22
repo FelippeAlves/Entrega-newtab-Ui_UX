@@ -5,20 +5,57 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: #b5b5b9;
+}
+
+input,
+select {
+  margin: 8px 0;
 }
 
 .container {
-  background-image: linear-gradient(#31324f, #1f202e);
-  margin-top: 0.063rem;
+  background-color: #6f6c85;
+  margin-top: 0.5rem;
   align-items: center;
   padding: 1.25rem;
-  /* width: 45vw; */
+  margin-bottom: 0.3rem;
+  border-radius: 3px;
+  box-shadow: 1px 3px 10px -6px black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #a49fc7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-shadow: 1px -5px 15px black;
 }
 
 .desktop-layout {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.class-saldo {
+  display: flex;
+  margin-right: 4vw;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.saldo-caixa {
+  margin-left: 4px;
+  color: rgb(69, 153, 58);
+}
+
+.class-user {
+  display: flex;
 }
 
 .content {
@@ -46,8 +83,13 @@ body {
 button {
   padding: 0.25rem 0.438rem;
   font-size: 15px;
-  color: #000000;
-  font-weight: bold;
+  color: #fff;
+  font-weight: normal;
+  background-color: #76a381;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  width: 75px;
 }
 
 /* CSS dos Modals */
@@ -67,13 +109,15 @@ button {
   background-color: white;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 60px 0px black;
 }
 
 .texto-cabecalho-modal {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #474971;
+  background-color: #a49fc7;
   color: #ffffff;
   padding: 10px;
   width: 94%;
@@ -83,10 +127,13 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border: none;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .btn-fechar {
   height: 65%;
+  width: 100%;
 }
 
 .modal-title {
@@ -142,6 +189,72 @@ button {
 
 /* Media Queries */
 
+@media screen and (max-width: 2200px) and (min-width: 1900px) {
+  .container {
+    width: 30vw;
+  }
+
+  .user-logo {
+    width: 60px;
+  }
+
+  .desktop-layout {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 1899px) and (min-width: 1025px) {
+  .container {
+    width: 45vw;
+  }
+
+  .user-logo {
+    width: 60px;
+  }
+
+  .desktop-layout {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 413px) {
+  .container {
+    width: 100vw;
+  }
+
+  .desktop-layout {
+    margin-top: 80px;
+  }
+
+  .user-logo {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .user-logo {
+    width: 60px;
+  }
+
+  .desktop-layout {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .desktop-layout {
+    margin-top: 85px;
+  }
+
+  .user-logo {
+    width: 60px;
+  }
+
+  .class-saldo {
+    margin-right: 7vw;
+  }
+}
+
 @media screen and (max-width: 412px) and (min-width: 391px) {
   .container {
     width: 100vw;
@@ -154,23 +267,9 @@ button {
   .infos p {
     font-size: 15px;
   }
-}
 
-@media screen and (max-width: 2200px) and (min-width: 1900px) {
-  .container {
-    width: 30vw;
-  }
-}
-
-@media screen and (max-width: 1899px) and (min-width: 1025px) {
-  .container {
-    width: 45vw;
-  }
-}
-
-@media screen and (max-width: 1024px) and (min-width: 391px) {
-  .container {
-    width: 100vw;
+  .desktop-layout {
+    margin-top: 200px;
   }
 }
 
@@ -209,5 +308,25 @@ button {
 
   button {
     font-size: 10px;
+  }
+
+  .desktop-layout {
+    margin-top: 90px;
+  }
+
+  .user-title {
+    font-size: 0.9rem;
+  }
+
+  .user-logo {
+    width: 42px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .class-saldo p {
+    margin: 2px;
   }
 }

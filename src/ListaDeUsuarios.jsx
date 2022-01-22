@@ -42,6 +42,8 @@ const [abrirNaoRecebeu, setAbrirNaoRecebeu] = useState("none"); // Para msg de e
 const [valorCartao, setValorCartao] = useState("1"); // Para pegar o cartão escolhido para pagamento
 const [valorDinheiro, setValorDinheiro] = useState(""); // Para pegar o valor de pagamento digitado
 const [validarCampo, setValidarCampo] = useState("none"); // Para validar campo de valor digitado
+const [validarSaldo, setValidarSaldo] = useState("none"); // Para validar Saldo de valor digitado
+const [saldoCaixa, setSaldoCaixa] = useState(3000); // Valor da carteira
 
 // Função para abrir o modal de pagamento do usuário
 const abrirModalPagar = (name) => {
@@ -51,31 +53,57 @@ const abrirModalPagar = (name) => {
 
 const fecharPrimeiroModal = (name) => {
     setAbrirPagamento("none")
+    setValidarCampo("none")
+    setValidarSaldo("none")
+    setValorDinheiro("")
 }
 
 // Função que abre o modal de recibo de pagamento 
 const abrirModalPagou = () => {
     if (valorDinheiro === "") {
         setValidarCampo("flex");
-    } else 
-        {
+    } else {
         if (valorCartao === "1") {
-            setAbrirRecebeu("flex");
-            setAbrirNaoRecebeu("none")
+            let y = validarPagamento()
+            console.log(y);
+            if (y === true) {
+                setAbrirRecebeu("flex");
+                setAbrirNaoRecebeu("none")
+                setAbrirPagou("flex");
+            }
         } else {
             setAbrirRecebeu("none");
             setAbrirNaoRecebeu("flex")
+            setAbrirPagou("flex");
         }
-        setAbrirPagamento("none");
-        setAbrirPagou("flex");
-        setValorDinheiro("");
+        /* setAbrirPagamento("none"); */        
+        /* setValorDinheiro(""); */
         setValidarCampo("none");
+    }
+}
+
+const validarPagamento = (param) => {
+    let x = valorDinheiro.replace('R$', '')
+    x = parseInt(x.replace(',', ''))
+    if (x <= saldoCaixa) {
+        setSaldoCaixa(saldoCaixa - x)
+        setValidarSaldo("none")
+        param = true
+        return param
+    } else {
+        setValidarSaldo("flex")
+        param = false
+        return param
     }
 }
 
 // Função para fechar o modal do recibo de pagamento
 const fecharModal = () => {
     setAbrirPagou("none");
+    setValidarCampo("none")
+    setValidarSaldo("none")
+    setAbrirPagamento("none");
+    setValorDinheiro("")
 }
 
 // Função para validar campo de valor para pagamento do usuário
@@ -87,6 +115,18 @@ const valorInput = (event) => {
 // Renderizando na tela as informações recebidas da API 
     return (
         <>
+        <header>
+            <div className='header'>
+                <div className='class-user'>
+                    <img className='user-logo' src="https://img.icons8.com/small/128/000000/user-male-circle.png"/>
+                    <h3 className='user-title'>Felippe Alves de Paula</h3>
+                </div>
+                <div className='class-saldo'>
+                    <p>Saldo:</p>
+                    <p className='saldo-caixa'>{saldoCaixa}</p>
+                </div>
+            </div>
+        </header>
         <div className='desktop-layout'>
             {infos.map(item => (
                 
@@ -95,7 +135,7 @@ const valorInput = (event) => {
                         <img className="thumbnail" src={item.img} alt="Foto do usuário" />
                         <div className="infos">   
                             <p>Nome do Usuário: {item.name}</p>
-                            <p>ID: {item.id} - Username: {item.username}</p>
+                            <p>Username: {item.username}</p>
                         </div>
                         <button className="botao-pagar" onClick={()=>{abrirModalPagar(item.name)}}>Pagar</button>
                     </div>
@@ -114,6 +154,7 @@ const valorInput = (event) => {
                 <div className="valorInput">
                     <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
                     <p style={{display:validarCampo}}>Campo obrigatório</p>
+                    <p style={{display:validarSaldo}}>Você não tem saldo suficiente</p>
                 </div>
                 <select value={valorCartao} onChange={escolhaDoCartao}>
                 <option value="1">Cartão com final {cards[0].card_number.substr(-4)}</option>
