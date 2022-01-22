@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c0e06a141917efe1e2ce886778e3ef8a",
+    "revision": "2e318707167d710d599b5255a938dba0",
     "url": "/Entrega-newtab-Ui_UX/index.html"
   },
   {
-    "revision": "db17b88af4ad06941e27",
-    "url": "/Entrega-newtab-Ui_UX/static/css/main.80af90e0.chunk.css"
+    "revision": "293a6c251cc5d067cde4",
+    "url": "/Entrega-newtab-Ui_UX/static/css/main.0f37d8ab.chunk.css"
   },
   {
     "revision": "10ae0603604359519bfb",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "db17b88af4ad06941e27",
-    "url": "/Entrega-newtab-Ui_UX/static/js/main.d6341306.chunk.js"
+    "revision": "293a6c251cc5d067cde4",
+    "url": "/Entrega-newtab-Ui_UX/static/js/main.197becf1.chunk.js"
   },
   {
     "revision": "e98f260621b7e9a598f7",

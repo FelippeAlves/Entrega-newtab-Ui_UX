@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Entrega-newtab-Ui_UX/precache-manifest.221f3b9209fa1922346f24957bdc4e68.js"
+  "/Entrega-newtab-Ui_UX/precache-manifest.e5eaee7d3178e44362c89b2dffcb7335.js"
 );
 
 self.addEventListener('message', (event) => {

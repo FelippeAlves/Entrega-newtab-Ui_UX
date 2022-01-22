@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Entrega-newtab-Ui_UX/static/css/main.80af90e0.chunk.css",
-    "main.js": "/Entrega-newtab-Ui_UX/static/js/main.d6341306.chunk.js",
-    "main.js.map": "/Entrega-newtab-Ui_UX/static/js/main.d6341306.chunk.js.map",
+    "main.css": "/Entrega-newtab-Ui_UX/static/css/main.0f37d8ab.chunk.css",
+    "main.js": "/Entrega-newtab-Ui_UX/static/js/main.197becf1.chunk.js",
+    "main.js.map": "/Entrega-newtab-Ui_UX/static/js/main.197becf1.chunk.js.map",
     "runtime-main.js": "/Entrega-newtab-Ui_UX/static/js/runtime-main.6246d5a8.js",
     "runtime-main.js.map": "/Entrega-newtab-Ui_UX/static/js/runtime-main.6246d5a8.js.map",
     "static/js/2.50c414a1.chunk.js": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js",
     "static/js/2.50c414a1.chunk.js.map": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js.map",
     "index.html": "/Entrega-newtab-Ui_UX/index.html",
-    "precache-manifest.221f3b9209fa1922346f24957bdc4e68.js": "/Entrega-newtab-Ui_UX/precache-manifest.221f3b9209fa1922346f24957bdc4e68.js",
+    "precache-manifest.e5eaee7d3178e44362c89b2dffcb7335.js": "/Entrega-newtab-Ui_UX/precache-manifest.e5eaee7d3178e44362c89b2dffcb7335.js",
     "service-worker.js": "/Entrega-newtab-Ui_UX/service-worker.js",
-    "static/css/main.80af90e0.chunk.css.map": "/Entrega-newtab-Ui_UX/static/css/main.80af90e0.chunk.css.map",
+    "static/css/main.0f37d8ab.chunk.css.map": "/Entrega-newtab-Ui_UX/static/css/main.0f37d8ab.chunk.css.map",
     "static/js/2.50c414a1.chunk.js.LICENSE.txt": "/Entrega-newtab-Ui_UX/static/js/2.50c414a1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6246d5a8.js",
     "static/js/2.50c414a1.chunk.js",
-    "static/css/main.80af90e0.chunk.css",
-    "static/js/main.d6341306.chunk.js"
+    "static/css/main.0f37d8ab.chunk.css",
+    "static/js/main.197becf1.chunk.js"
   ]
 }
